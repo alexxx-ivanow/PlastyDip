@@ -500,3 +500,27 @@ display:none;
 outline: thin dotted;
 outline: 0px auto -webkit-focus-ring-color;
 outline-offset: 0; }
+
+.crumphs-separator {
+    width: 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+.breads a {
+    color: #8a8a8a;
+    /* font-size: 9px!important; */
+}
+
+.breads {
+    background: #FCE803;
+    height: 50px;
+    font-family: 'Roboto';
+    font-size: 10px;
+}
+
+.breads .row {
+    height: 50px;
+    padding-left: 15px;
+    padding-top: 19px;
+}
