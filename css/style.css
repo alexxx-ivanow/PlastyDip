@@ -83,6 +83,12 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 	z-index: 1;
 	text-align: center;
 }
+
+.nav-top-page {
+    background: rgb(35, 31, 32);
+    position: relative;
+    text-align: center;
+}
 .in-nav-top{
 	height:65px;
 	text-align: center;
