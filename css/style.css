@@ -91,7 +91,8 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 .ul-top-nav {
     list-style: none;
     padding-left: 0!important;
-	margin-top:17px;
+	margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .ul-top-nav li {
@@ -99,7 +100,7 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
     /* width: 162px; */
     text-align: center;
     font-size: 16px;
-    margin-right: 74px;
+    margin-right: 55px;
 }
 
 .ul-top-nav li>a {
