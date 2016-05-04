@@ -1,0 +1,84 @@
+/*html,
+body {
+  background: #212129;
+  color: #FFF;
+}
+
+header {
+  padding: 72px 0;
+}
+
+header .logo {
+  width: 192px;
+  height: auto;
+  max-height: initial;
+}
+*/
+.magnet {
+  width: 100%;
+}
+
+.magnet-filter {
+  margin-bottom: 72px;
+}
+
+.magnet-filter .btn {
+  border: none;
+  color: #414149;
+}
+
+.magnet-filter .btn.active {
+  /*color: #1CEAC3;*/
+}
+
+.magnet-item {
+  margin: 0 5px 5px 0;
+  /*border: 1px dashed #1CEAC3;*/
+  background-color: transparent;
+  color: #1CEAC3;
+  width: 99px;
+  height: 99px;
+}
+
+.magnet-item.w2 {
+  width: 202px;
+}
+
+.magnet-item.h2 {
+  height: 203px;
+}
+
+.magnet-item.w3 {
+  width: 303px;
+}
+
+.magnet-item.h3 {
+  height: 303px;
+}
+
+.magnet-item.w4 {
+    width: 409px;
+}
+.magnet-item.h4 {
+    height: 410px;
+}
+
+.magnet-item.even,
+.magnet-item.odd,
+.magnet-item.prime {
+  background-color: transparent;
+  color: #1CEAC3;
+}
+
+div[class*="col-sm-"].dw {
+  width: 50%;
+}
+
+footer,
+footer a {
+  color: #FFF;
+}
+
+footer::before {
+  content: none;
+}
