@@ -524,3 +524,7 @@ outline-offset: 0; }
     padding-left: 15px;
     padding-top: 19px;
 }
+.content{
+	min-height:1000px;
+	
+}
