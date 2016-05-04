@@ -36,31 +36,40 @@ header .logo {
   /*border: 1px dashed #1CEAC3;*/
   background-color: transparent;
   color: #1CEAC3;
-  width: 99px;
-  height: 99px;
+  /*width: 99px;
+  height: 99px;*/
+  width: 123px;
+  height: 123px;
+  /*background-size: 105%!important;*/
 }
 
 .magnet-item.w2 {
-  width: 202px;
+  /*width: 202px;*/
+  width: 242px;
 }
 
 .magnet-item.h2 {
-  height: 203px;
+  /*height: 203px;*/
+  height: 251px;
 }
 
 .magnet-item.w3 {
+  /*width: 303px;*/
   width: 303px;
 }
 
 .magnet-item.h3 {
-  height: 303px;
+  /*height: 303px;*/
+  height: 408px;
 }
 
 .magnet-item.w4 {
-    width: 409px;
+    /*width: 409px;*/
+    width: 490px;
 }
 .magnet-item.h4 {
-    height: 410px;
+    /*height: 410px;*/
+    height: 490px;
 }
 
 .magnet-item.even,

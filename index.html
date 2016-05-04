@@ -199,7 +199,7 @@
 					<button class="btn btn-link" data-filter="other">Другое</button>
 				</div>
 			</div>
-	<div class="magnet" style="position: relative; overflow: hidden; height: 416px; transition: 800ms;">
+	<div class="magnet" style="position: relative; overflow: hidden; height: 410px; transition: 800ms;">
 		<div class="odd magnet-item w4 h2" style="position: absolute; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: 800ms;background:url(img/main-about.jpg) no-repeat;background-position:center center;">
           <span class="number">1</span>
 		  <a href="#">&nbsp;</a>
@@ -358,17 +358,18 @@
     <script src="js/bootstrap.js"></script>
 	<!-- Script to Activate the Carousel -->
     <script>
-    $('.carousel').carousel({
-        interval: 7000 //changes the speed
-    })
+		$('.carousel').carousel({
+			interval: 7000 //changes the speed
+		})
     </script>
 	<!-- Script to Activate the slide-box -->
 	<script src="js/jQuery.zSlider.js"></script>
 	<script>
-	$(function () {
-		$('#slide-box').zSlider({width:550,height:155,turnTo:"c"});
-	})
-</script>
+		$(function () {
+			$('#slide-box').zSlider({width:550,height:155,turnTo:"c"});
+		})
+	</script>
+	<!-- Script to scroll-up -->
 	<script type="text/javascript"> 	
 		$(function(){
   $.fn.scrollToTop=function(){
@@ -378,7 +379,7 @@
   }
   var scrollDiv=$(this);
   $(window).scroll(function(){
-    if($(window).scrollTop()=="0"){
+    if($(window).scrollTop()<="50"){
     $(scrollDiv).fadeOut("slow")
     }else{
     $(scrollDiv).fadeIn("slow")
