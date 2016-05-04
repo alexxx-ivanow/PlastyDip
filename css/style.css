@@ -1,12 +1,6 @@
 @font-face {
-	    font-family: ManiaExtended; /* имя шрифта для CSS правил */
-	    src: local("ManiaExtended"), /* проверяем наличие шрифта в ОС пользователя */
-         url(fonts/ManiaExtended-Oblique.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
-  }
-@font-face {
-	    font-family: Roboto; /* имя шрифта для CSS правил */
-	    src: local("Roboto"), /* проверяем наличие шрифта в ОС пользователя */
-         url(fonts/Roboto-Regular.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+	    font-family: 'ManiaExtended-Oblique'; /* имя шрифта для CSS правил */	     /* проверяем наличие шрифта в ОС пользователя */
+         src: url('../fonts/ManiaExtended.ttf'); /* загружаем его по указанному пути */
   }
 
 body{
@@ -14,7 +8,7 @@ body{
 	font-family: Roboto;
 }
 h1,h2,h3{
-	font-family: 'ManiaExtended';
+	font-family: 'ManiaExtended-Oblique';
 	font-style: italic;
 	text-transform: uppercase;
 }
@@ -52,7 +46,7 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
     color: #fff;
     font-size: 20px;
     margin-left: 10px;
-	font-family: 'ManiaExtended';
+	font-family: 'ManiaExtended-Oblique';
 }
 .sotset{
 	text-align:center;
@@ -173,7 +167,7 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 }
 
 .main_str>strong {
-    font-family: 'ManiaExtended';
+    font-family: 'ManiaExtended-Oblique';
 	font-size: 14px;
 }
 
@@ -428,7 +422,7 @@ ul.ul-footer-nav li a {
 }
 #toTop {
 position:fixed;
-bottom:27px; /* Ð¾Ñ‚ÑÑ‚ÑƒÐ¿ ÐºÐ½Ð¾Ð¿ÐºÐ¸ Ð¾Ñ‚ Ð½Ð¸Ð¶Ð½ÐµÐ³Ð¾ ÐºÑ€Ð°Ñ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹*/
+bottom:27px;
 right:50px;
 cursor:pointer;
 display:none;
@@ -494,3 +488,8 @@ display:none;
 .map-form-body form a:hover {
     text-decoration: none;
 }
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+outline: thin dotted;
+outline: 0px auto -webkit-focus-ring-color;
+outline-offset: 0; }
