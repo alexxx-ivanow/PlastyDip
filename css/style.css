@@ -1,3 +1,14 @@
+@font-face {
+	    font-family: ManiaExtended; /* имя шрифта для CSS правил */
+	    src: local("ManiaExtended"), /* проверяем наличие шрифта в ОС пользователя */
+         url(fonts/ManiaExtended-Oblique.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+@font-face {
+	    font-family: Roboto; /* имя шрифта для CSS правил */
+	    src: local("Roboto"), /* проверяем наличие шрифта в ОС пользователя */
+         url(fonts/Roboto-Regular.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+
 body{
 	background:#fff;
 	font-family: Roboto;
