@@ -300,13 +300,13 @@
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=-16w5OV4eRM5HE0prKn9lIOoLpSng0iw&width=100%&height=490&lang=ru_RU&sourceType=constructor&scroll=false"></script>
 		<div class="map-form">
 			<div class="map-form-head">
-			<p><i class="fa fa-phone"></i> г.Санкт-Петербург, пр. Королёва, 62</p>
-			<p style="text-decoration:underline;"><i class="fa fa-phone"></i>info@plastidip-pro.com</p>
+			<p><i class="fa fa-map-marker"></i> г.Санкт-Петербург, пр. Королёва, 62</p>
+			<p style="text-decoration:underline;"><i class="fa fa-envelope fa-lg"></i>info@plastidip-pro.com</p>
 			<p><i class="fa fa-phone"></i> 8 (981) 709-18-89</p>
 			</div>
 			<div class="map-form-body">
 				<h4>Напишите нам</h4>
-				<form action=""#>
+				<form action="#">
 				<input type="text" name="name" placeholder="ФИО">
 				<input type="text" name="mail" placeholder="Email">
 				<textarea name="mess" placeholder="Сообщение"></textarea>
@@ -367,21 +367,27 @@
 		$('#slide-box').zSlider({width:550,height:155,turnTo:"c"});
 	})
 </script>
-<!-- Scroll to Top -->
-   <script type="text/javascript"> 
-		$(function() {		 
-		$(window).scroll(function() {		 
-		if($(this).scrollTop() >= 10) {		 
-		$('#toTop').fadeIn(500);		 
-		} else {		 
-		$('#toTop').fadeOut(500);		 
-		}		 
-		});		 
-		$('#toTop').click(function() {		 
-		$('body,html').animate({scrollTop:0},1500);		 
-		});		 
-		});		 
-		</script>
-	
+	<script type="text/javascript"> 	
+		$(function(){
+  $.fn.scrollToTop=function(){
+    $(this).hide().removeAttr("href");
+    if($(window).scrollTop()!="0"){
+        $(this).fadeIn("slow")
+  }
+  var scrollDiv=$(this);
+  $(window).scroll(function(){
+    if($(window).scrollTop()=="0"){
+    $(scrollDiv).fadeOut("slow")
+    }else{
+    $(scrollDiv).fadeIn("slow")
+  }
+  });
+    $(this).click(function(){
+      $("html, body").animate({scrollTop:0},"slow")
+    })
+  }
+});
+$(function() {$("#toTop").scrollToTop();});
+	</script>
   </body>
 </html>
