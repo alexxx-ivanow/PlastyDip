@@ -1,6 +1,6 @@
 @font-face {
-	    font-family: 'ManiaExtended-Oblique'; /* имя шрифта для CSS правил */	     /* проверяем наличие шрифта в ОС пользователя */
-         src: url('../fonts/ManiaExtended.ttf'); /* загружаем его по указанному пути */
+	    font-family: 'ManiaExtended-Oblique'; /* Ð¸Ð¼Ñ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° Ð´Ð»Ñ CSS Ð¿Ñ€Ð°Ð²Ð¸Ð» */	     /* Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ðµ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° Ð² ÐžÐ¡ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ */
+         src: url('../fonts/ManiaExtended.ttf'); /* Ð·Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ ÐµÐ³Ð¾ Ð¿Ð¾ ÑƒÐºÐ°Ð·Ð°Ð½Ð½Ð¾Ð¼Ñƒ Ð¿ÑƒÑ‚Ð¸ */
   }
 
 body{
@@ -577,3 +577,59 @@ span.count-items {
     display: block!important;
 }
 .content .line-short-white{margin-top: 40px;}
+
+.form-horizontal {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.span1 {
+    width: 55px;
+    height: 25px;
+    border-color: #DCD8D8;
+    color: #847A7A;
+    padding-left: 3px;
+    font-size: 14px;
+}
+.top-filter {
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    overflow: hidden;
+    height: 45px;
+	margin-bottom: 40px;
+}
+.count-filter {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.colors {
+    display: inline-block;
+    width: 265px;
+    margin-left: 25px;
+    margin-top: 13px;
+    height: 20px;
+}
+.ul-colors li {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    margin-right: 7px;
+}
+.ul-colors li a {
+    display: block;
+    height: 15px;
+    width: 15px;
+}
+
+.ul-colors li.actived{
+	border:2px solid #000;
+}
+
+.ul-colors {
+    margin-top: -18px;
+}
