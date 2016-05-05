@@ -82,9 +82,9 @@ h1 a {
   font-size: 16px;
 }
 
-.accordion li.open .link { color: #b63b4d; }
+.accordion li.open .link {color: #231F20;}
 
-.accordion li.open i { color: #b63b4d; }
+.accordion li.open i { color: #FCE800; }
 
 .accordion li.open i.fa-chevron-down {
   -webkit-transform: rotate(180deg);
@@ -100,24 +100,26 @@ h1 a {
 
 .accordion .submenu {
   display: none;
-  background: #444359;
-  font-size: 14px;
+  /* background: #444359; */
+  font-size: 12px;
+  padding-left: 20px;
 }
 
-.accordion .submenu li { border-bottom: 1px solid #4b4a5e; }
+.accordion .submenu li {/* border-bottom: 1px solid #4b4a5e; */}
 
 .accordion .submenu a {
   display: block;
   text-decoration: none;
-  color: #d9d9d9;
-  padding: 12px;
-  padding-left: 42px;
+  color: #3E3131;
+  padding: 8px;
+  /* padding-left: 42px; */
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
 .accordion .submenu a:hover {
-  background: #b63b4d;
+  background: #FCE700;
   color: #FFF;
+  /* text-decoration: underline; */
 }

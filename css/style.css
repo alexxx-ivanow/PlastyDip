@@ -640,11 +640,12 @@ span.count-items {
     width: 282px;
 }
 .catalog-sidebar .sidebar-menu{
-    min-height: 500px;
+    /*min-height: 500px;*/
     background: #fbfbfb;
     border: 1px solid #ebebeb;
     border-radius: 9px;
 	margin-bottom:20px;
+	padding-bottom: 15px;
 }
 .catalog-banner-sidebar img {
     width: 100%;
