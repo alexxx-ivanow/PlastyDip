@@ -188,7 +188,7 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 .row.main-second-two {
     background: url(../img/main-car.png) no-repeat;
     height: 900px;
-    background-position: center 150px;
+    background-position: -180px 150px;
 }
 .row.main-second-two p {
     position: absolute;
@@ -198,21 +198,21 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 
 .sec-two-one {
     /* left: 50%; */
-    margin-left: 50px;
+    margin-left: 0px;
     margin-top: 174px;
     text-align: right;
 }
 
 .sec-two-two {
     /* left: 50%; */
-    margin-left: 763px;
+    margin-left: 712px;
     margin-top: 255px;
     text-align: right;
 }
 
 .sec-two-three {
     /* left: 50%; */
-    margin-left: 537px;
+    margin-left: 480px;
     margin-top: 720px;
     text-align: left;
 }
@@ -526,7 +526,19 @@ outline-offset: 0; }
 }
 .content{
 	min-height:1000px;
-	
+	color:#5a5b5f;
+	font-size: 12px;
+	padding-bottom: 30px;
+}
+.content p{
+	margin-bottom:30px;
+	text-align:justify;
+}
+.content img{
+	margin-right:30px;
+	margin-bottom:15px;
+	margin-top:10px;
+	max-width:100%;
 }
 .content h1{
 	text-align: center;
@@ -564,3 +576,4 @@ span.count-items {
 .count-items {
     display: block!important;
 }
+.content .line-short-white{margin-top: 40px;}
