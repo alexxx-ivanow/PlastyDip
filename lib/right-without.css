@@ -1,0 +1,61 @@
+.pika-thumbs li{width: 70px; height:70px;}
+
+.pikachoose {width: 730px;margin: 0 auto;position:relative;height: 100%;}
+.pika-thumbs {margin: 0;width:100px;position: absolute;top: 0;right: 30px;height: 100%;/* margin-top: 25px; *//* left: 630px; */z-index: 1;padding: 0;padding-left: 30px;padding-top: 25px;background: #fbfbfb;}
+	.pika-thumbs li {margin: 0;padding: 0;border: 1px solid #ebebeb;margin-bottom: 25px;background: #fff;}
+#pikame img{height: 60px!important;width: 60px;margin: 0;}
+.pika-counter,.pika-textnav {
+    display: none;
+}
+.pika-stage img {
+    width: 550px!important;
+    margin: 0;
+    padding: 0;
+}
+.clip {
+    text-align: center;
+}
+
+.pika-thumbs li.active {
+    border: 1px solid #FCE800;
+}
+.col-lg-7.col-mg-7.col-sm-7.col-xs-7.card-content-left {
+    height: 100%;
+}
+
+.container.container-card .row {
+    height: 625px;
+}
+.pika-stage {
+    height: 100%!important;
+    margin: 0;
+    width: 600px;
+    border-right: 1px solid #ebebeb;
+}
+.col-lg-5.col-mg-5.col-sm-5.col-xs-5.card-content-right {
+    height: 100%;
+    background: #fbfbfb;
+}
+.row-right-card {
+    width: 370px;
+    float: right;
+    margin-top: 20px;
+}
+
+.number{
+			margin:100px 30%;
+		}
+		.minus, .plus{
+			width:10px;
+			height:10px;
+			background:#f2f2f2;
+			border-radius:4px;
+			padding:3px 5px 3px 5px;
+			border:1px solid #ddd;
+		}
+		input{
+			height:24px;
+			border:1px solid #ddd;
+			border-radius:4px;
+			padding:0 2px;
+		}

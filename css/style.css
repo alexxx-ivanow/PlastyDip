@@ -706,3 +706,8 @@ span.count-items {
     font-size: 14px;
     text-align: center!important;
 }
+
+.container-card {
+    min-height: 600px;
+    border: 1px solid #ebebeb;
+}
