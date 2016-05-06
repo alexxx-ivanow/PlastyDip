@@ -10,6 +10,7 @@
 .pika-stage img {
     width: 550px!important;
     margin: 0;
+	border: none;
     padding: 0;
 }
 .clip {

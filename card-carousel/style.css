@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------*/
 /*	0.	RESET
-/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	margin:0;
@@ -64,12 +64,11 @@ table {
 .clearfix {
 	display:block
 }
-
+*/
 
 /*-----------------------------------------------------------------------------------*/
 /*	1.	FONT-FACE
-/*-----------------------------------------------------------------------------------*/
-
+/*-----------------------------------------------------------------------------------
  @font-face {
  font-family: 'Puritan20Italic';
  src: url('style/type/puritan/puritan_italic-webfont.eot?') format('eot'),  url('style/type/puritan/puritan_italic-webfont.woff') format('woff'),  url('style/type/puritan/puritan_italic-webfont.ttf') format('truetype'),  url('style/type/puritan/puritan_italic-webfont.svg#webfontZMWmRIPG') format('svg');
@@ -82,10 +81,11 @@ table {
  font-weight: normal;
  font-style: normal;
 }
+*/
 
 /*-----------------------------------------------------------------------------------*/
 /*	2.	GENERAL
-/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------
 
 body {
 	font-family:"Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -121,19 +121,21 @@ h4 {
 	width: 960px;
 	margin: 100px auto 0;
 }
-
+*/
 /*-----------------------------------------------------------------------------------*/
 /*	3. CAROUSEL
 /*-----------------------------------------------------------------------------------*/
 
 #wrapper .d-carousel ul li {
 	background: none;
+	border: 1px solid #ebebeb;
 	background-color: #FFF;
-	-webkit-box-shadow: 0px 1px 2px 0px #b7b7b7;
+	/* -webkit-box-shadow: 0px 1px 2px 0px #b7b7b7; */
 	-moz-box-shadow: 0px 1px 2px 0px #b7b7b7;
-	box-shadow: 0px 1px 2px 0px #b7b7b7; 
+	/* box-shadow: 0px 1px 2px 0px #b7b7b7; */
 	padding: 15px;
-	width: 175px;
+	width: 258px;
+	height: 360px;
 }
 
 .jcarousel-direction-rtl {
@@ -156,8 +158,8 @@ h4 {
 }
 
 .d-carousel .jcarousel-container-horizontal {
-	width: 870px;
-	height: 325px;
+	width: 1170px;
+	height: 365px;
 	padding: 0 45px;
 }
 
@@ -208,4 +210,26 @@ h4 {
 
 .d-carousel .jcarousel-prev-horizontal:hover {
 	background-position: bottom left;
+}
+li.jcarousel-item.jcarousel-item-horizontal {
+    text-align: center;
+}
+
+li.jcarousel-item.jcarousel-item-horizontal img {
+    margin: 0;
+    margin-top: 20px;
+	border: none;
+}
+.d-carousel h4 a {
+    color: #231f20;
+    font-size: 16px;
+}
+
+.d-carousel p {
+    font-size: 14px;
+    color: #909090;
+	text-align: center;
+}
+.d-carousel {
+    margin-bottom: 85px;
 }

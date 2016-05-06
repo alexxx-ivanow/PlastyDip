@@ -739,3 +739,10 @@ span.count-items {
 .card-description p {
     text-align: left!important;
 }
+.popular-items h3 {
+    color: #1c1817;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 60px;
+	margin-bottom: 30px;
+}

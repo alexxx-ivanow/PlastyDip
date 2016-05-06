@@ -21,7 +21,16 @@
 	<link rel="stylesheet" href="accordion-menu/css/style.css">
 	<link type="text/css" href="lib/right-without.css" rel="stylesheet" />	
 	<link rel="stylesheet" href="code/style.css">
-	<link rel="stylesheet" href="code/jquery-ui.css">
+	<link rel="stylesheet" href="code/jquery-ui.css">	
+	<link rel="stylesheet" type="text/css" href="card-carousel/style.css" media="all" />
+	<!--link rel="stylesheet" media="all" href="style/type/puritan.css" /-->
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="card-carousel/style/css/ie7.css" media="all" />
+	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />	
+ 	<link rel="stylesheet" href="fancybox/style.css" />
+	
   </head>
   <body>
   <div class="container-fluid navi">
@@ -86,15 +95,21 @@
 		<div class="line-short-white"></div>
 		<!--catalog-->
 		<div class="container container-card">
+		
 			<div class="row">
 				<div class="col-lg-7 col-mg-7 col-sm-7 col-xs-7 card-content-left">
 					<div class="pikachoose">
 						<ul id="pikame">
-							<li><a href="#"><img src="lib/1.jpg"/></a></li>
-							<li><a href="#"><img src="lib/2.jpg"/></a></li>
+				
+							<li><a rel="example_group" href="lib/1.jpg"><img src="lib/1.jpg"/></a></li>
+							<li><a rel="example_group" href="lib/2.jpg"><img src="lib/2.jpg"/></a></li>
+							<li><a rel="example_group" href="lib/3.jpg"><img src="lib/3.jpg"/></a></li>
+							<li><a rel="example_group" href="lib/4.jpg"><img src="lib/4.jpg"/></a></li>
+							<li><a rel="example_group" href="lib/5.jpg"><img src="lib/5.jpg"/></a></li>
+							<!--li><a href="#"><img src="lib/2.jpg"/></a></li>
 							<li><a href="#"><img src="lib/3.jpg"/></a></li>
 							<li><a href="#"><img src="lib/4.jpg"/></a></li>
-							<li><a href="#"><img src="lib/5.jpg"/></a></li>
+							<li><a href="#"><img src="lib/5.jpg"/></a></li-->
 						</ul>
 					</div>
 				</div>
@@ -134,6 +149,60 @@
 			</div>
 		</div>
 		<!--catalog-->
+		
+		<!--popular-goods-->
+		
+		<div class="container popular-items">
+			<div class="row">
+				<h3>ПОПУЛЯРНЫЕ ТОВАРЫ</h3>
+				
+				<!-- Begin Wrapper -->
+  <div id="wrapper">
+  
+    <div class="d-carousel">
+      <ul class="carousel">
+        <li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+        <li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+		<li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+		<li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+		<li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+		<li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+		<li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+		<li> <a href="#"><img src="img/catalog/catalog-item1.png" alt="" /></a>
+          <h4><a href="#">Plasti Dip spray Фосфор зеленый (Glow In the Dark)</a></h4>
+          <p><span>1800</span> руб.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  
+  <!-- End Wrapper --> 
+				
+			</div>
+		</div>
+		<!--popular-goods-->
 	  </div>
 	</div>
   </div>
@@ -248,8 +317,6 @@ $(function() {$("#toTop").scrollToTop();});
 <!--Card-input-plus-minus-->
 
 <!--Card-input-colors-->
-
-<!--script src="code/jquery.js"></script-->
   <script src="code/jquery-ui.js"></script> 
   <script>
   $(function() {
@@ -261,8 +328,30 @@ $(function() {$("#toTop").scrollToTop();});
      });
   });
   </script>
-
 <!--Card-input-colors-->
+<!--Card-carousel-->
+
+<script type="text/javascript" src="card-carousel/style/js/jquery.jcarousel.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    // Initialise the first and second carousel by class selector.
+	// Note that they use both the same configuration options (none in this case).
+	jQuery('.d-carousel .carousel').jcarousel({
+        scroll: 1,
+		autoplay: 'auto'
+    });
+});
+</script>
+
+<!--Card-carousel-->
 	
+<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".pika-stage a").fancybox();
+		});
+	</script>
   </body>
 </html>
