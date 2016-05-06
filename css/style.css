@@ -395,6 +395,7 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 .container-fluid.footer {
     height: 80px;
     background: url('../img/footer-bg-add.jpg') no-repeat;
+	border-top: 1px solid #e5e5e5;
 }
 .footer-logo {
     background: url('../img/footer-bg.jpg') no-repeat;
