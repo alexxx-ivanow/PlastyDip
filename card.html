@@ -20,6 +20,8 @@
 	<link rel="stylesheet" href="css/zSlider.css">
 	<link rel="stylesheet" href="accordion-menu/css/style.css">
 	<link type="text/css" href="lib/right-without.css" rel="stylesheet" />	
+	<link rel="stylesheet" href="code/style.css">
+	<link rel="stylesheet" href="code/jquery-ui.css">
   </head>
   <body>
   <div class="container-fluid navi">
@@ -102,28 +104,31 @@
 						
 						<p class="card-price"><strong><span>1800</span> руб.</strong></p>
 						
-						<form class="form-color-card">
-							<fieldset>							
-									<div class="btn-group">
-										  <select class="span-card-color">
-											<option style="background:red;"><span class="card-color" style="background:#fff;">Зеленый</span></option>
-											<option><span class="card-color" style="background:#43c0cf;"></span></option>
-											<option><span class="card-color" style="background:#3d402f;"></span></option>
-											<option><span class="card-color" style="background:#4aaf00;"></span></option>
-											<option><span class="card-color" style="background:#315bbd;"></span></option>											
-											<option><span class="card-color" style="background:#ec6115;"></span></option>											
-											<option><span class="card-color" style="background:#dc041d;"></span></option>											
-											<option><span class="card-color" style="background:#fce800;"></span></option>											
-										  </select>
-									</div>
-									<div class="number">
+						<div class="demo">
+							<form action="#">							 
+							  <div id="circle"></div>							 
+							  <fieldset>
+								<select name="color" id="color">
+								  <option value="black">Черный</option>
+								  <option value="red">Красный</option>
+								  <option value="yellow" selected="selected">Желтый</option>
+								  <option value="blue">Синий</option>
+								  <option value="green">Зеленый</option>
+								</select>
+								
+								<div class="number">
 										<span class="minus">-</span>
 										<input type="text" value="1" size="5"/>
 										<span class="plus">+</span>
 									</div>
 									<button type="submit" id="card-submit">ЗАКАЗАТЬ</button>
-								</fieldset>	
-							</form>
+							  </fieldset>							 
+							</form>							 
+						</div>	
+						<div class="card-description">
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore Beatae vitae dicta sunt explicabo. </p>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore Beatae vitae dicta sunt explicabo. </p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -221,6 +226,7 @@ $(function() {$("#toTop").scrollToTop();});
 		</script>
 <!--Card-gallery-->
 
+<!--Card-input-plus-minus-->
 <script type="text/javascript" >
         $(document).ready(function() {
             $('.minus').click(function () {
@@ -239,5 +245,24 @@ $(function() {$("#toTop").scrollToTop();});
             });
         });
 	</script>
+<!--Card-input-plus-minus-->
+
+<!--Card-input-colors-->
+
+<!--script src="code/jquery.js"></script-->
+  <script src="code/jquery-ui.js"></script> 
+  <script>
+  $(function() {
+    var circle = $( "#circle" );
+    $( "#color" ).selectmenu({
+       change: function( event, data ) {
+         circle.css( "background", data.item.value );
+       }
+     });
+  });
+  </script>
+
+<!--Card-input-colors-->
+	
   </body>
 </html>

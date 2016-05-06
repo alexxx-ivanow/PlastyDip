@@ -711,3 +711,31 @@ span.count-items {
     min-height: 600px;
     border: 1px solid #ebebeb;
 }
+#card-submit {
+    float: right;
+    margin-right: -127px;
+    margin-top: 20px;
+    width: 150px;
+    background: #FCE800;
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    color: #231f20;
+    font-weight: 600;
+    font-size: 14px;
+}
+.card-price {
+    color: #231f20;
+    font-size: 48px;
+	padding-left: 10px;
+}
+.card-description {
+    margin-top: 110px;
+    width: 90%;
+    font-size: 14px;
+    color: #45413e;
+}
+
+.card-description p {
+    text-align: left!important;
+}
