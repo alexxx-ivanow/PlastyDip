@@ -937,3 +937,25 @@ span.count-items {
 .cls-cars>div:last-child {
     padding-top: 10px;
 }
+.yellow-parag {
+    height: 55px;
+    background: #FCE800;
+    color: #231f20;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 17px;
+	text-transform:uppercase;
+}
+table.price-nums {
+    width: 100%;
+    height: 92px;
+}
+
+table.price-nums tr td {
+    text-align: center;
+    border: 1px solid #ebebeb;
+    font-size: 16px;
+    color: #231f20;
+    font-weight: 600;
+}
