@@ -898,3 +898,42 @@ span.count-items {
     color: #1b1817;
     font-weight: 600;
 }
+.anons-price {
+    text-align: center;
+    font-size: 18px;
+    color: #231f20;
+}
+
+.anons-price span {
+    background: #FCE800;
+    font-weight: 600;
+    padding: 3px 10px;
+}
+
+.anons-price {
+    text-align: center!important;
+    margin-top: -20px;
+}
+.cls-cars {
+    height: 53px;
+    background: #000;
+}
+
+.table-price img {
+    margin-bottom: 0;
+}
+
+.cls-cars>div {
+    display: inline-block;
+    width: 167px;
+    padding-top: 19px;
+    float: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-align: center;
+    color: #FCE800;
+}
+
+.cls-cars>div:last-child {
+    padding-top: 10px;
+}
