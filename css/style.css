@@ -746,3 +746,42 @@ span.count-items {
     margin-top: 60px;
 	margin-bottom: 30px;
 }
+.comments-form {
+    background: #fbfbfb;
+    padding: 10px;
+    height: 210px;
+    border: 1px solid #ebebeb;
+    font-size: 12px;
+    color: #abacb1;
+}
+.comments-form input {
+    width: 563px;
+    display: inline-block;
+    margin-bottom: 10px!important;
+    border: 1px solid #ebebeb;
+    padding-left: 12px;
+}
+
+.comments-form input.mail {
+    float: right;
+}
+#text-comment {
+    height: 120px;
+    border: 1px solid #ebebeb;
+    padding-left: 12px;
+}
+
+.comments-form a {
+    color: #1c1817;
+    font-size: 12px;
+    text-decoration: underline;
+    display: block;
+    margin-right: 2px;
+    text-align: right;
+}
+.comments-form a:hover {
+    text-decoration: none;
+}
+.comments-filter {
+    margin-top: 30px;
+}
