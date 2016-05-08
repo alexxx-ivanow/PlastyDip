@@ -17,13 +17,15 @@
 	<link rel="stylesheet" href="assets/magnet.css">
 	<link rel="stylesheet" href="css/zSlider.css">
 	<link rel="stylesheet" href="accordion-menu/css/style.css">
+	
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen" />
   </head>
   <body>
   <div class="container-fluid navi">
 	  <div class="container"> 
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-				<a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+				<a href="card.html"><img src="img/logo.png" alt="" class="logo"></a>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sotset">		    
 			     <a href="#"><span class="ci ci-1"></span></a>
@@ -44,16 +46,16 @@
 		<div class="row">
 			<ul class="ul-top-nav">
 				<li><a href="actsii-and-sales.html">АКЦИИ И СКИДКИ</a></li>
-				<li><a href="#">НАШИ РАБОТЫ</a></li>
-				<li><a href="#">ЦЕНЫ НА РАБОТЫ</a></li>
+				<li><a href="gallery.html">НАШИ РАБОТЫ</a></li>
+				<li><a href="price.html">ЦЕНЫ НА РАБОТЫ</a></li>
 				<li><a href="catalog.html">МАГАЗИН</a></li>
-				<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
-				<li><a href="#">СТАТЬИ</a></li>
-				<li><a href="#">КОНТАКТЫ</a></li>
+				<li><a href="comments.html">ОПЛАТА И ДОСТАВКА</a></li>
+				<li><a href="news.html">СТАТЬИ</a></li>
+				<li><a href="contacts.html">КОНТАКТЫ</a></li>
 			</ul>
 		</div>
     </div>
-  </div> 
+  </div>  
   <div class="container-fluid breads">
 	<div class="container">
 		<div class="row">
@@ -66,7 +68,8 @@
 		  </div>
 		  <div class="small-cart">
 		  <a href="#">
-			<i class="fa" aria-hidden="true"></i>
+			<!--i class="fa" aria-hidden="true"></i-->
+			<img src="img/cart2.png" alt="">
 			<span class="count-items">Товаров в корзине: <strong>5</strong></span>
 			<span class="all-price"> На сумму: <strong>2500</strong> руб. </span>
 		  </a>
@@ -98,7 +101,7 @@
 	<div class="magnet" style="position: relative; overflow: hidden; height: 410px; transition: 800ms;">
 		<div class="odd magnet-item w4 h2" style="position: absolute; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: 800ms;background:url(img/main-about.jpg) no-repeat;background-position:center center;">
           <span class="number">1</span>
-		  <a href="#"></a>
+		  <a href="img/main-about.jpg" class="fancy-gallery"></a>
         </div>
         <div class="even prime magnet-item w2" style="position: absolute; transform: translate3d(104px, 0px, 0px) scale3d(1, 1, 1); opacity: 1; transition: 800ms;background:url(img/main-about.jpg) no-repeat;background-position:center center;">
           <span class="number">2</span>
@@ -173,6 +176,14 @@
 	
 	
 	<script src="assets/jquery-1.11.2.min.js"></script>
+	
+	<script type="text/javascript" src="fancybox/jquery.fancybox1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".fancy-gallery").fancybox();
+			});
+		</script>
+	
 	<script src="assets/haundodesign.js"></script>
 	<script src="assets/magnet.min.js"></script>
 	<script src="assets/script.js"></script>
@@ -219,6 +230,6 @@ $(function() {$("#toTop").scrollToTop();});
 <script src="accordion-menu/js/index.js"></script>
 
 <!--Accordion-menu-->
-	
+
   </body>
 </html>
