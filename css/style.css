@@ -1,7 +1,27 @@
+/*@font-face {
+	    font-family: 'ManiaExtended-Oblique';          
+         src: url('../fonts/ManiaExtendedOblique.eot'); 
+		 src: url('../fonts/ManiaExtended.ttf'); 
+  }*/
+  @font-face {
+  font-family: 'ManiaExtended-Oblique';
+  src: url('../fonts/mania/ManiaExtended-Oblique.eot');
+  src: url('../fonts/mania/ManiaExtended-Oblique.woff') format('woff'),
+       url('../fonts/mania/ManiaExtended-Oblique.ttf') format('truetype'),
+       url('../fonts/mania/ManiaExtended-Oblique.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
-	    font-family: 'ManiaExtended-Oblique'; /* Ð¸Ð¼Ñ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° Ð´Ð»Ñ CSS Ð¿Ñ€Ð°Ð²Ð¸Ð» */	     /* Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ðµ ÑˆÑ€Ð¸Ñ„Ñ‚Ð° Ð² ÐžÐ¡ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ */
-         src: url('../fonts/ManiaExtended.ttf'); /* Ð·Ð°Ð³Ñ€ÑƒÐ¶Ð°ÐµÐ¼ ÐµÐ³Ð¾ Ð¿Ð¾ ÑƒÐºÐ°Ð·Ð°Ð½Ð½Ð¾Ð¼Ñƒ Ð¿ÑƒÑ‚Ð¸ */
-  }
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/Roboto-Regular.eot');
+  src: url('../fonts/roboto/Roboto-Regular.woff') format('woff'),
+       url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'),
+       url('../fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 body{
 	background:#fff;
@@ -391,6 +411,7 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 #map {
     height: 490px;
     background: #EAE4E4;
+	padding: 0;
 }
 .container-fluid.footer {
     height: 82px;
@@ -597,6 +618,7 @@ span.count-items {
     width: 55px;
     height: 25px;
     border-color: #DCD8D8;
+	border: 1px solid #DCD8D8;
     color: #847A7A;
     padding-left: 3px;
     font-size: 14px;
@@ -871,6 +893,8 @@ span.count-items {
 .month-filter>span,.year-filter>span, .count-filter>span {
     color: #abacb1;
     font-size: 10px;
+	margin-top: 6px;
+    float: left;
 }
 .news-item-img {
     display: block;
