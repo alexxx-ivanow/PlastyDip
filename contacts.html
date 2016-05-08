@@ -23,7 +23,7 @@
 	  <div class="container"> 
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-				<a href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+				<a href="card.html"><img src="img/logo.png" alt="" class="logo"></a>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 sotset">		    
 			     <a href="#"><span class="ci ci-1"></span></a>
@@ -44,12 +44,12 @@
 		<div class="row">
 			<ul class="ul-top-nav">
 				<li><a href="actsii-and-sales.html">АКЦИИ И СКИДКИ</a></li>
-				<li><a href="#">НАШИ РАБОТЫ</a></li>
-				<li><a href="#">ЦЕНЫ НА РАБОТЫ</a></li>
+				<li><a href="gallery.html">НАШИ РАБОТЫ</a></li>
+				<li><a href="price.html">ЦЕНЫ НА РАБОТЫ</a></li>
 				<li><a href="catalog.html">МАГАЗИН</a></li>
-				<li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
-				<li><a href="#">СТАТЬИ</a></li>
-				<li><a href="#">КОНТАКТЫ</a></li>
+				<li><a href="comments.html">ОПЛАТА И ДОСТАВКА</a></li>
+				<li><a href="news.html">СТАТЬИ</a></li>
+				<li><a href="contacts.html">КОНТАКТЫ</a></li>
 			</ul>
 		</div>
     </div>
@@ -66,7 +66,7 @@
 		  </div>
 		  <div class="small-cart">
 		  <a href="#">
-			<i class="fa fa-shopping-cart fa-3x" aria-hidden="true"></i>
+			<i class="fa" aria-hidden="true"></i>
 			<span class="count-items">Товаров в корзине: <strong>5</strong></span>
 			<span class="all-price"> На сумму: <strong>2500</strong> руб. </span>
 		  </a>
@@ -147,7 +147,27 @@
 				<div class="contacts-line"></div>
 			</div>
 		</div>
+		<form action="#" class="contacts-form">
+			<div class="container contacts-form-top">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<input type="text" name="name" placeholder="ФИО">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<input type="text" name="mail" placeholder="Email">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<input type="text" name="phone" placeholder="Телефон">
+					</div>
+					<div class="form-message">
+						<textarea name="message-contacts" id="contacts-message" placeholder="Сообщение"></textarea>
+					</div>
+					<button type="submit" id="contacts-submit">ОТПРАВИТЬ</button>
+				</div>
+			</div>
+		</form>		
   </div>
+  <div id="map-cont" class="container-fluid"></div>
   
   <div class="container-fluid footer">
 		<div class="container">
@@ -179,22 +199,19 @@
 		</div>
 	</div>
 	
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	
-	
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->	
 	<script src="assets/jquery-1.11.2.min.js"></script>
 	<script src="assets/haundodesign.js"></script>
 	<script src="assets/magnet.min.js"></script>
-	<script src="assets/script.js"></script>
-	<!--script async="" src="assets/analytics.js"></script-->    
+	<script src="assets/script.js"></script>    
     <script src="js/bootstrap.js"></script>
-	<!-- Script to Activate the Carousel -->
+<!-- Script to Activate the Carousel -->
     <script>
 		$('.carousel').carousel({
 			interval: 7000 //changes the speed
 		})
     </script>
-	<!-- Script to Activate the slide-box -->
+<!-- Script to Activate the slide-box -->
 	<script src="js/jQuery.zSlider.js"></script>
 	<script>
 		$(function () {
@@ -224,11 +241,59 @@
 });
 $(function() {$("#toTop").scrollToTop();});
 	</script>
-<!--Accordion-menu-->
 
+<!--Accordion-menu-->
 <script src="accordion-menu/js/index.js"></script>
-
 <!--Accordion-menu-->
-	
+
+<!--яндекс.карта-->
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>		
+		<script type="text/javascript">
+			ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+			var myMap; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
+			function init () { // функция - собиралка карты и фигни
+				myMap = new ymaps.Map("map-cont", { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
+						center: [60.028222, 30.244955], // ну тут центр
+						behaviors: ['default', 'none'], // scrollZoom скроллинг колесом
+						zoom: 16 // тут масштаб
+					});
+				myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+					.add('zoomControl', { left: 5, top: 5 }) //Масштаб
+					//.add('typeSelector') //Список типов карты
+					//.add('mapTools', { left: 35, top: 5 }) // Стандартный набор кнопок
+					//.add('searchControl'); // Строка с поиском
+				/* Создаем кастомные метки */
+				myPlacemark0 = new ymaps.Placemark([60.028222, 30.244955], { // Создаем метку с такими координатами и суем в переменную
+						balloonContent: '<div class="ballon"><span>Тут какой-то текст</span><br/><p>Тут тоже<span class="prav" style="font-size: 12px; font-weight:200;">+7 (000) 000-00-00</span></p><img class="close" onclick="myMap.balloon.close()" src="img/contacts/close.png" alt=""/></div>' // сдесь содержимое балуна в формате html, все стили в css
+						}, {
+						iconImageHref: 'img/contacts/icon11.png', // картинка иконки
+						iconImageSize: [66, 72], // размер иконки
+						iconImageOffset: [-32, -64], // позиция иконки
+						balloonContentSize: [380, 140], // размер нашего кастомного балуна в пикселях
+						balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+						balloonImageHref: 'img/contacts/ballon22.png', // Картинка заднего фона балуна
+						balloonImageOffset: [-99, -169], // смещание балуна, надо подогнать под стрелочку
+						balloonImageSize: [380, 169], // размер картинки-бэкграунда балуна
+						balloonShadow: true,
+						balloonAutoPan: false // для фикса кривого выравнивания
+						});
+						/* тоже самое для других меток *
+				/* Добавляем */
+				myMap.geoObjects
+					.add(myPlacemark0);
+
+				/* Фикс кривого выравнивания кастомных балунов */
+				myMap.geoObjects.events.add([
+					'balloonopen'
+				], function (e) {
+					var geoObject = e.get('target');
+					myMap.panTo(geoObject.geometry.getCoordinates(), {
+												delay: 0
+											});
+				});
+		}
+		</script>
+<!--яндекс.карта-->
+
   </body>
 </html>

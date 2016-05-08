@@ -298,8 +298,8 @@
 		</div>
 	  </div>
 	</div>
-	<div class="container-fluid" id="map">
-		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=-16w5OV4eRM5HE0prKn9lIOoLpSng0iw&width=100%&height=490&lang=ru_RU&sourceType=constructor&scroll=false"></script>
+	<div class="container-fluid" id="map-cont">
+		<!--script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=-16w5OV4eRM5HE0prKn9lIOoLpSng0iw&width=100%&height=490&lang=ru_RU&sourceType=constructor&scroll=false"></script-->
 		<div class="map-form">
 			<div class="map-form-head">
 			<p><i class="fa fa-map-marker"></i> г.Санкт-Петербург, пр. Королёва, 62</p>
@@ -347,9 +347,7 @@
 		</div>
 	</div>
 	
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	
-	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->	
 	<script src="assets/jquery-1.11.2.min.js"></script>
 	<script src="assets/haundodesign.js"></script>
 	<script src="assets/magnet.min.js"></script>
@@ -369,7 +367,7 @@
 			$('#slide-box').zSlider({width:550,height:155,turnTo:"c"});
 		})
 	</script>
-	<!-- Script to scroll-up -->
+<!-- Script to scroll-up -->
 	<script type="text/javascript"> 	
 		$(function(){
   $.fn.scrollToTop=function(){
@@ -391,6 +389,55 @@
   }
 });
 $(function() {$("#toTop").scrollToTop();});
-	</script>
+</script>
+<!-- Script to scroll-up -->
+<!--яндекс.карта-->
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>		
+		<script type="text/javascript">
+			ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+			var myMap; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
+			function init () { // функция - собиралка карты и фигни
+				myMap = new ymaps.Map("map-cont", { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
+						center: [60.028568, 30.233744], // ну тут центр
+						behaviors: ['default', 'none'], // scrollZoom скроллинг колесом
+						zoom: 16 // тут масштаб
+					});
+				myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+					.add('zoomControl', { left: 5, top: 5 }) //Масштаб
+					//.add('typeSelector') //Список типов карты
+					//.add('mapTools', { left: 35, top: 5 }) // Стандартный набор кнопок
+					//.add('searchControl'); // Строка с поиском
+				/* Создаем кастомные метки */
+				myPlacemark0 = new ymaps.Placemark([60.028222, 30.244955], { // Создаем метку с такими координатами и суем в переменную
+						balloonContent: '<div class="ballon"><span>Тут какой-то текст</span><br/><p>Тут тоже<span class="prav" style="font-size: 12px; font-weight:200;">+7 (000) 000-00-00</span></p><img class="close" onclick="myMap.balloon.close()" src="img/contacts/close.png" alt=""/></div>' // сдесь содержимое балуна в формате html, все стили в css
+						}, {
+						iconImageHref: 'img/contacts/icon11.png', // картинка иконки
+						iconImageSize: [66, 72], // размер иконки
+						iconImageOffset: [-32, -64], // позиция иконки
+						balloonContentSize: [380, 140], // размер нашего кастомного балуна в пикселях
+						balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+						balloonImageHref: 'img/contacts/ballon22.png', // Картинка заднего фона балуна
+						balloonImageOffset: [-99, -169], // смещание балуна, надо подогнать под стрелочку
+						balloonImageSize: [380, 169], // размер картинки-бэкграунда балуна
+						balloonShadow: true,
+						balloonAutoPan: false // для фикса кривого выравнивания
+						});
+						/* тоже самое для других меток *
+				/* Добавляем */
+				myMap.geoObjects
+					.add(myPlacemark0);
+
+				/* Фикс кривого выравнивания кастомных балунов */
+				myMap.geoObjects.events.add([
+					'balloonopen'
+				], function (e) {
+					var geoObject = e.get('target');
+					myMap.panTo(geoObject.geometry.getCoordinates(), {
+												delay: 0
+											});
+				});
+		}
+		</script>
+<!--яндекс.карта-->
   </body>
 </html>
