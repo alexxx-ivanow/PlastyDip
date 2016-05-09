@@ -1120,3 +1120,6 @@ form.contacts-form textarea {
     display: inline-block;
     margin-right: 5px;
 }
+.ui-selectmenu-button span.ui-selectmenu-text{
+	background: #FBFBFB!important;
+}
