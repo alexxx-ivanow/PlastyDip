@@ -130,10 +130,10 @@ i.fa-phone, i.fa-envelope,i.fa-map-marker{
 }
 
 .ul-top-nav li>a {
-    color: #6f6366;
+    color: #B4ACAE;
     transition:0.5s;
     font-family: Roboto;
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 
 .ul-top-nav li>a:hover {
@@ -1065,8 +1065,8 @@ form.contacts-form input,form.contacts-form textarea {
     border: 0;
     border-radius: 4px;
     font-size: 14px;
-    background: #fafafa;
-    color: #959595;
+    background: #E5DFDF;
+    color: #453838!important;
     padding-left: 18px;
 }
 form.contacts-form input {
